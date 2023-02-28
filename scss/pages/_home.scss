@@ -1,0 +1,196 @@
+.banner{
+    &__wrapper{
+        min-height: calc(100vh - 60px);
+    }
+    &__content{
+        max-width: 50rem;
+        width: 100%;
+        h1{
+            font-size: clamp(3rem, 6vw, 6rem);
+            font-weight: bold;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+            span{
+                color: $clr-primary;
+            }
+        }
+        p{
+            font-size: 1.8rem;
+            margin-bottom: 4rem;
+        }
+        a:last-child{
+            margin-left:2rem;
+    }
+}
+}
+
+
+/// PRODUCT
+
+.product__cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2rem;
+}
+.product__item{
+    box-shadow: $shadow;
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    transition: .5s ease;
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+    &::before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0%;
+        height: 0;
+        background-color: $clr-primary;
+        z-index: -1;
+        transition: .5s ease;
+    }
+
+    &:hover::before{
+        width: 50%;
+        height: 15rem;
+    }
+    &:hover a{
+        background-color: $clr-primary;
+        color: $clr-light;
+    }
+    img{
+        border-radius: 50% ;
+        width: 20rem;
+        height: 20rem;
+        margin: 0 auto 3rem;
+        display: block;
+    }
+    a{
+        display: block;
+        text-align: center;
+    }
+
+
+.item__info{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    align-items: center;
+        h3{
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        h4{
+            font-weight: bolder;
+            font-size: 2rem;
+        }
+        small{
+            font-weight: bold;
+            font-size: 1.2rem;
+            opacity: 0.3;
+        }
+    }
+
+    .item__review{
+        h4{
+            font-size: 1.4rem;
+            i{
+                color: $clr-primary;
+            }
+        }
+    }
+
+}
+
+.product__item.reverse{
+    &::before{
+        right: 0;
+        left: unset;
+    }
+
+}
+
+.category__tab {
+ 
+    ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 3rem;
+        box-shadow: $shadow;
+        max-width: 43rem;
+        width: 100%;
+        margin: 0 auto 6rem;
+        
+        li {
+           
+            min-width: 7rem;
+           a {
+            display: block;
+            padding:1rem;
+            text-align: center;
+            border-radius: 3rem;
+            &:hover {
+                background-color: $clr-primary;
+                color: $clr-light;
+            }
+           }
+        }
+        li.active a {
+            background-color: $clr-primary;
+            color: $clr-light;
+           
+        }
+    }
+}
+
+
+// BOOKING //
+
+.booking{
+    min-height: 50rem;
+    background-image:url(../img/restaurant.jpg) ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: 300px;
+    background-position-y: -300px;
+    &__content{
+        background-color: $clr-primary;
+        color: $clr-light;
+        height: 50rem;
+        width: 50%;
+        position: relative;
+        display: grid;
+        place-items: center;
+        justify-content: flex-start;
+        &::before{
+            content: '';
+            position: absolute;
+            right: 100%;
+            height: 100%;
+            width: 40vw;
+            background-color: $clr-primary;
+        }
+        .inner{
+            max-width: 40rem;
+            width: 100%;
+            small{
+                text-transform: uppercase;
+                color: $clr-dark;
+                font-weight: 800;
+                font-size: 1.8rem;
+            }
+            h2{
+                font-size: clamp(3rem, 6vw, 5rem );
+                font-weight: bold;
+                margin: 3rem 0 3rem;
+            }
+            p{
+                margin-bottom: 3rem;
+            }
+        }
+    }
+}
