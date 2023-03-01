@@ -1,0 +1,38 @@
+//FOOTER
+
+.footer{
+    background-color: $clr-dark;
+    color: $clr-light;
+    padding: 6rem 0;
+    a{
+        color: $clr-light;
+    }
+
+    &__wrapper{
+        @include gridUneven(1.3fr 1fr 1fr 1fr, 2rem);
+        @include mediaQuery($mobile){
+            @include grid(1, 2rem);
+        }
+        h3{
+            text-transform: uppercase;
+            margin-bottom: 3rem;
+            font-size: 1.8rem;
+        }
+    
+        p{
+            width: 80%;
+        }
+        li{
+            margin-bottom: 1.6rem;
+        }
+
+
+    }
+}
+
+.copyright{
+    background-color: $clr-dark;
+    text-align: center;
+    color: $clr-primary;
+    padding: .5rem 0;
+}

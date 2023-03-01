@@ -7,15 +7,6 @@
   }
 }
 
-
-
-@mixin grid($cols: 1fr 1fr) {
-  display: grid;
-  grid-template-columns: $cols;
-  grid-gap: 1rem;
-}
-
-
 @mixin mediaQuery($width) {
   @media screen and (max-width: $width) {
     @content;
@@ -44,7 +35,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 1px;
+  min-height: $height;
+}
+
+@mixin centerBetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 @mixin grid($cols, $gap) {
@@ -52,7 +49,11 @@
   grid-template-columns: repeat($cols, 1fr);
   grid-gap: ($gap);
 }
-
+@mixin gridUneven($cols, $gap) {
+  display: grid;
+  grid-template-columns: $cols;
+  grid-gap: ($gap);
+}
 
 @mixin imgFit($width: 1px, $height: 1px) {
   width: $width;
@@ -67,3 +68,6 @@
   left: $left;
   top: $top; 
 }
+
+
+
