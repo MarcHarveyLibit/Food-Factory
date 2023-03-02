@@ -1,5 +1,5 @@
 .header{
-    
+    padding: 1.5rem 0;
     a{
         font-weight: bold;
         
@@ -10,9 +10,51 @@
             color: $clr-primary;
         }
     }
+    .btn__show{
+        position: absolute;
+        top: 1rem;
+        right: 3rem;
+        font-size: 3rem;
+        cursor: pointer;
+        display: none;
+        @include mediaQuery($mobile){
+            display: block; 
+        }
+    }
+    .btn__back{
+        display: none;
+        @include mediaQuery($mobile){
+            display: block;
+
+        }
+    }
     &__nav{
         @include mediaQuery($mobile){
-            display: none;
+            position: fixed;
+            top: 0;
+            right: -350px;
+            height: 100vh;
+            background-color: $clr-light;
+            border-left: 1px solid #ccc;
+            width: 300px;
+            z-index: 999;
+            .btn__back{
+                position: absolute;
+                top: 2rem;
+                right: 2rem;
+                font-size: 3rem;
+            }
+            ul{
+                margin-top: 6rem;
+                justify-content: flex-end;
+                flex-direction: column;
+                li{
+                    margin-bottom: 2rem;
+                    a{
+                        font-size: 2rem;
+                    }
+                }
+            }
         }
         a{
             position: relative;

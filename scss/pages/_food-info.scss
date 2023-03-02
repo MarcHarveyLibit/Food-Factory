@@ -1,0 +1,194 @@
+.info{
+    &__wrapper{
+        @include grid(2, 10rem);
+        @include mediaQuery($mobile){
+            @include grid(1, 5rem)
+        }
+
+    }
+
+    &__images__lg{
+        padding: 4rem;
+        border-radius: 2rem;
+        box-shadow: $shadow;
+        margin-bottom: 10rem;
+        background-color: $clr-light;
+        text-align: center
+    }
+
+    &__image__variation{
+        @include grid(3, 2rem);
+        @include mediaQuery($mobile){
+            @include grid(2, 5rem)
+        }
+        button{
+            padding: 2rem;
+            background-color: $clr-light;
+            border-radius: 2rem;
+            box-shadow: $shadow;
+            text-align: center;
+            height: 12rem;
+            img{
+                border-radius: 50%;
+                @include imgFit(10rem, 10rem);
+                transform: translateY(-5rem);
+            }
+            h3{
+                transform: translateY(-4rem);
+            }
+        }
+    }
+
+    &__content__header{
+        h1{
+            font-size: clamp(2rem, 6vw, 4rem);
+        }
+        .meta, ul{
+            display: flex;
+            gap: 2rem;
+            align-items: center ;
+        }
+        ul{
+            gap: .5rem;
+            li i{
+                color: $clr-primary;
+            }
+            li:last-child i{
+                color: #ccc;
+            }
+        }
+
+        small{
+            color: #ccc;
+            font-size: 1.2rem;
+        }
+        .prices{
+            margin: 2rem 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include mediaQuery($mobile){
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            h2{
+                font-size: 5rem;
+                color: $clr-primary;
+            }
+            p{
+                margin-bottom: 0;
+                color: $clr-primary;
+                font-size: 2rem;
+                text-decoration: line-through;
+            }
+            h3{
+                font-size: 2.5rem;
+                color: #ccc;
+            }
+        }
+
+    &__content__body{
+        h3{
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+
+        .sizes{
+            display: flex;
+            gap: 2rem;
+            li{
+                width: 4rem;
+                height: 4rem;
+                border-radius: 50%;
+                background-color: #f5f5f5;
+                color: #cacaca;
+                font-weight: bold;
+                @include centerAll;
+                cursor: pointer;
+            }
+
+            li.active{
+                background-color: $clr-primary;
+                color: $clr-light;
+                box-shadow: 0px 4px 10px rgba($clr-primary, .2);
+            }
+        }
+
+        .quantity{
+            display: inline-flex;
+            align-items: center;
+            padding: .6rem 1.8rem ;
+            border-radius: 2rem;
+            background-color: #f5f5f5;
+            box-shadow: $shadow;
+            gap: 3rem;
+            border: 1px solid #cacaca;
+                li{
+                    font-size: 2rem;
+                    cursor: pointer;
+                }
+                    li:first-child{
+                        color: #ccc;
+                    }
+                }
+
+                .btn{
+                    display: block;
+                    text-align: center;
+                    width: 100%;
+                    margin: 5rem 0;
+                }
+            }
+}
+
+.related__foods{
+    padding: 6rem 0;
+    border-top: 1px solid #f5f5f5;
+    h3{
+        font-size: 2rem;
+        margin-bottom: 8rem;
+    }
+    // &__wrapper{
+    //     display: grid;
+    //     @include grid(6, 2rem)
+    // }
+    &__card{
+        padding: 2rem;
+        background-color: $clr-light;
+        border-radius: 2rem;
+        box-shadow: $shadow;
+        text-align: center;
+        height: 12rem;
+        margin: 0 1rem;
+        img{
+            border-radius: 50%;
+            @include imgFit(10rem, 10rem);
+            transform: translateY(-5rem);
+        }
+        h3{
+            transform: translateY(-4rem);
+        }
+    }
+}
+
+
+.tns-inner{
+    height: 25rem;
+    transform: translateY(37px);
+}
+.tns-controls{
+    display: flex;
+    gap: 1rem;
+    button{
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        @include centerAll;
+        background-color: $clr-primary;
+        color: $clr-light;
+        font-size: 2rem;
+       
+    }
+}
